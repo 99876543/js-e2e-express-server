@@ -17,6 +17,8 @@ pipeline {
       steps {
         sh 'npm test' 
         sh 'npm fund'
+        sh 'npm audit'
+        sh 'npm audit fix'
       }
     }
     stage('Update') {
