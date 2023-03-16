@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'npm publish'
+        sh 'npm update'
       }
     }
   }
