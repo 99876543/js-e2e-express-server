@@ -16,9 +16,10 @@ pipeline {
     stage('Test') {
       steps {
         sh 'npm test' 
+        sh 'npm fund'
       }
     }
-    stage('Deploy') {
+    stage('Update') {
       steps {
         sh 'npm update'
       }
