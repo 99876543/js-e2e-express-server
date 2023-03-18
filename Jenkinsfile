@@ -9,21 +9,18 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'npm install' 
-        sh 'npm run build' 
+        sh 'dotnet build'  
       }
     }
     stage('Test') {
       steps {
-        sh 'npm test' 
-        sh 'npm fund'
-        sh 'npm audit'
-        sh 'npm audit fix'
+        sh 'dotnet test' 
+        
       }
     }
     stage('Update') {
       steps {
-        sh 'npm update'
+        sh 'dotnet publish'
       }
     }
   }
